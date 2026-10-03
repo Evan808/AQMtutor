@@ -1,17 +1,31 @@
+/* Design foundation. Every screen takes its colours, type and button style from here.
+   References: docs/references/ (lesson slide and map flowchart). */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Page */
+  --bg: #fdfdfc;
+  --ink: #16293d; /* dark navy, for text and outlines */
+  --muted: #68747f;
+  --axis: #55616c;
+  --surface: #efe3da; /* soft beige fill, from the flowchart reference */
+
+  /* Series colours for curves, legends and annotations */
+  --amber: #d5861c;
+  --teal: #1e8f86;
+  --blue: #3a7cc4;
+
+  --radius: 9px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
   height: 100%;
+  color-scheme: light;
 }
 
 html,
@@ -24,17 +38,11 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -42,8 +50,43 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* Buttons: thin dark outline, rounded corners, soft fill (flowchart reference). */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  background: #fff;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--surface);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #24405c;
+}
+
+.btn-quiet {
+  border-color: transparent;
+  background: none;
+  color: var(--muted);
 }

@@ -1,0 +1,249 @@
+/* Full-screen lesson: mostly blank, one question, one visual, one takeaway. */
+
+.lesson {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 24px clamp(24px, 5vw, 88px) 28px;
+  background: var(--bg);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.counter {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.title {
+  margin-top: clamp(12px, 3vh, 36px);
+  font-size: clamp(30px, 3.6vw, 56px);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: clamp(12px, 2.5vh, 28px);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* Prediction prompt */
+
+.predict {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  min-height: 42px;
+}
+
+.predictPrompt {
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.predictResult {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* Curves-on-axes block */
+
+.block {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  gap: clamp(16px, 3vw, 48px);
+}
+
+.chartColumn {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart {
+  flex: 1;
+  min-height: 0;
+}
+
+.chart :global(.MafsView) {
+  --mafs-bg: transparent;
+  --mafs-fg: var(--ink);
+  font-family: inherit;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 560px;
+  padding-top: 4px;
+}
+
+.sliderLabel {
+  font-size: 17px;
+}
+
+.sliderRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.sliderRow input {
+  flex: 1;
+  height: 28px;
+  accent-color: var(--amber);
+  cursor: pointer;
+}
+
+.sliderRow input:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.sliderHint {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.side {
+  width: clamp(200px, 22vw, 340px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6vh 0 8px;
+}
+
+.legend {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 3.5vh, 40px);
+  font-size: clamp(16px, 1.5vw, 24px);
+  font-weight: 700;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.swatch {
+  flex: none;
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: currentColor;
+}
+
+.formula {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: clamp(18px, 1.7vw, 26px);
+}
+
+.formulaCaption {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.takeaway {
+  margin-top: 14px;
+  font-size: clamp(20px, 2vw, 32px);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Setup slide */
+
+.setup {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 6vw, 96px);
+}
+
+.setupText {
+  flex: 1;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.5;
+}
+
+.setupFormulas {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.setupFormula {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: clamp(22px, 2.2vw, 34px);
+}
+
+/* Check slide */
+
+.check {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  max-width: 760px;
+}
+
+.checkQuestion {
+  font-size: clamp(20px, 2vw, 30px);
+  line-height: 1.35;
+}
+
+.check textarea {
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 18px;
+  color: inherit;
+  background: #fff;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  resize: vertical;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 14px;
+}

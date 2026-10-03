@@ -28,7 +28,7 @@ An AI tutor that teaches one concept at a time through interactive visual lesson
 - **Teach, don't solve.** For homework problems, use the hint ladder: a hint, then a worked example with different numbers, then walking through the student's own problem while they do the math. Never hand over the final answer.
 - **Pedagogy loop:** predict, play, explain, check. Advance only when the student understands.
 - **Keep API costs low:** use a cheaper model (Haiku) for filing and grading short answers, a stronger model for teaching and slide descriptions, and prompt caching for course materials.
-- **Wireframe first.** Keep styling plain and neutral. Fonts, colors, and visual design come later.
+- **The look is part of the experience.** Lessons should feel polished, following the references in `docs/references/` (the lesson slide especially): mostly blank, one bold question, one visual, one takeaway, one colour per series. Colours, type and button styles come from the design foundation in `src/app/globals.css`; reuse those rather than inventing new ones. Product name, logo and the map's final look still come later.
 
 ## Housekeeping
 

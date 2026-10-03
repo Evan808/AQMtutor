@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export type ChatMessage = { role: "user" | "assistant"; content: string };
@@ -75,7 +76,10 @@ export default function Chat({ initialConversationId, initialMessages }: Props) 
     <main className={styles.page}>
       <header className={styles.header}>
         <h1>AI Tutor</h1>
-        <button onClick={newChat} disabled={waiting}>
+        <Link href="/lesson/t-vs-z" className="btn">
+          Lesson: T vs. Z
+        </Link>
+        <button className="btn" onClick={newChat} disabled={waiting}>
           New chat
         </button>
       </header>
@@ -83,7 +87,7 @@ export default function Chat({ initialConversationId, initialMessages }: Props) 
       <div className={styles.messages}>
         {messages.length === 0 && <p className={styles.empty}>Ask a question to start.</p>}
         {messages.map((message, index) => (
-          <div key={index} className={styles.message}>
+          <div key={index} className={message.role === "user" ? styles.user : undefined}>
             <div className={styles.role}>{message.role === "user" ? "You" : "Claude"}</div>
             <div className={styles.content}>{message.content || "…"}</div>
           </div>
@@ -97,7 +101,7 @@ export default function Chat({ initialConversationId, initialMessages }: Props) 
           placeholder="Ask a question"
           autoFocus
         />
-        <button type="submit" disabled={waiting || !input.trim()}>
+        <button type="submit" className="btn btn-primary" disabled={waiting || !input.trim()}>
           Send
         </button>
       </form>
