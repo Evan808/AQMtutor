@@ -8,6 +8,13 @@
       "when": 1790970149676,
       "tag": "0000_flaky_shaman",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791048345156,
+      "tag": "0001_black_lifeguard",
+      "breakpoints": true
     }
   ]
 }

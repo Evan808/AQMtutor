@@ -76,8 +76,8 @@ export default function Chat({ initialConversationId, initialMessages }: Props) 
     <main className={styles.page}>
       <header className={styles.header}>
         <h1>AI Tutor</h1>
-        <Link href="/lesson/t-vs-z" className="btn">
-          Lesson: T vs. Z
+        <Link href="/lessons" className="btn">
+          Lessons
         </Link>
         <button className="btn" onClick={newChat} disabled={waiting}>
           New chat

@@ -4,7 +4,7 @@ import { getDeck } from "@/lessons/decks";
 
 export default async function LessonPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const deck = getDeck(id);
+  const deck = await getDeck(id);
   if (!deck) notFound();
 
   return <LessonPlayer deck={deck} />;

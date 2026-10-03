@@ -163,6 +163,24 @@
   background: currentColor;
 }
 
+.sideTop {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 5vh, 48px);
+}
+
+.area {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.areaValue {
+  font-size: clamp(28px, 3vw, 46px);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
 .formula {
   display: flex;
   flex-direction: column;

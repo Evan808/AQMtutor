@@ -49,8 +49,8 @@ export const tVsZ: Deck = {
             distribution: { type: "normal", mean: 0, sd: 1 },
           },
         ],
-        slider: { name: "n", label: "Sample size", min: 2, max: 50, start: 6 },
-        shade: { series: "t", tailsBeyond: 2 },
+        slider: { name: "n", label: "Sample size", min: 2, max: 50, start: 6, step: 1 },
+        shade: { series: "t", region: { type: "tails", beyond: 2 }, showArea: false },
         annotation: { text: "Heavier tails", series: "t", x: -2.7 },
         formula: {
           latex: "t_{n-1} \\longrightarrow N(0,1)",

@@ -1,0 +1,85 @@
+.page {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.form input {
+  flex: 1;
+  padding: 11px 14px;
+  font: inherit;
+  font-size: 16px;
+  color: inherit;
+  background: #fff;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+}
+
+.heading {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.list li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+.list a {
+  font-weight: 600;
+}
+
+.list a:hover {
+  text-decoration: underline;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.problem {
+  padding: 12px 14px;
+  border: 1.5px solid var(--amber);
+  border-radius: var(--radius);
+  line-height: 1.5;
+}
+
+.problem ul {
+  margin: 6px 0 0 20px;
+  font-size: 14px;
+}

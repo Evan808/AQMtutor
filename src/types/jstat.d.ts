@@ -5,6 +5,10 @@ declare module "jstat" {
       pdf(x: number, mean: number, sd: number): number;
       cdf(x: number, mean: number, sd: number): number;
     };
+    chisquare: {
+      pdf(x: number, df: number): number;
+      cdf(x: number, df: number): number;
+    };
     studentt: {
       pdf(x: number, df: number): number;
       cdf(x: number, df: number): number;

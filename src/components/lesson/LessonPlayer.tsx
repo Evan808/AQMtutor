@@ -64,7 +64,7 @@ function Visual({ slide }: { slide: VisualSlide }) {
             <span className={styles.predictResult}>
               {guess === predict.answer
                 ? `You said ${guess.toLowerCase()}, and that's what happens.`
-                : `You said ${guess.toLowerCase()}. Watch the tails: they get ${predict.answer.toLowerCase()}.`}
+                : `You said ${guess.toLowerCase()}. Look again: it's ${predict.answer.toLowerCase()}.`}
             </span>
           )}
           {skipped && !played && <span className={styles.predictResult}>Drag the slider to find out.</span>}
